@@ -1,1 +1,18 @@
 terraform.tfvars
+
+# Add OpenTofu/Terraform internal cache rules to your ignore file
+sudo tee -a .gitignore <<EOF
+
+# Local directory for OpenTofu/Terraform modules and plugins
+.terraform/
+.terraform.lock.hcl
+
+# State files
+*.tfstate
+*.tfstate.*
+
+# Variables
+*.tfvars
+*.tfvars.json
+EOF
+
