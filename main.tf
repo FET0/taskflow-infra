@@ -78,7 +78,7 @@ resource "kubectl_manifest" "argocd_root_app" {
     spec:
       project: default
       source:
-        repoURL: https://github.com
+        repoURL: https://github.com/FET0/taskflow-app.git
         targetRevision: main
         path: app-of-apps
       destination:
